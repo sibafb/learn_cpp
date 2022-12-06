@@ -1,5 +1,6 @@
 /** 増補改訂版　Java 言語で学ぶデザインパターン入門　【マルチスレッド編】p119 GuardedSuspection.cpp **/
 #include <iostream>
+#include <memory>
 #include <deque>
 #include <thread>
 #include <mutex>
