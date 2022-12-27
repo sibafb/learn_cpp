@@ -1,5 +1,11 @@
 # learn_cpp
 
+## [LibrariesSandbox](/LibrariesSandbox)
+
+ - C++ の標準ライブラリの使いこなしを行うためディレクトリ
+
+ - [cpprefjp](https://cpprefjp.github.io/) を参考に実装を行う。
+
 ## [MultiThreadDesignPattern](/MultiThreadDesignPattern)
 
 - 結城 浩　増補改訂版　Java 言語で学ぶデザインパターン入門　【マルチスレッド編】　を参考に各パターンをC++に移植してみつつ、C++のライブラリの使い方を学習するディレクトリ。

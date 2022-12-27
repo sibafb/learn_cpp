@@ -17,31 +17,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Configure CMake filesystem
-      run: cd ${{github.workspace}}/filesystem && cmake -B ${{github.workspace}}/filesystem/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+    - name: Configure CMake LibrariesSandbox
+      run: cd ${{github.workspace}}/LibrariesSandbox && cmake -B ${{github.workspace}}/LibrariesSandbox/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
-    - name: Build filesystem
-      run: cmake --build ${{github.workspace}}/filesystem/build --config ${{env.BUILD_TYPE}}
-
-    - name: Configure CMake future
-      run: cd ${{github.workspace}}/future && cmake -B ${{github.workspace}}/future/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
-
-    - name: Build future
-      run: cmake --build ${{github.workspace}}/future/build --config ${{env.BUILD_TYPE}}
-
-    - name: Configure CMake thread
-      run: cd ${{github.workspace}}/thread && cmake -B ${{github.workspace}}/thread/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
-
-    - name: Build thread
-      run: cmake --build ${{github.workspace}}/thread/build --config ${{env.BUILD_TYPE}}
-
-    - name: Configure CMake threadClass
-      run: cd ${{github.workspace}}/threadClass && cmake -B ${{github.workspace}}/threadClass/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
-
-    - name: Build threadClass
-      run: cmake --build ${{github.workspace}}/threadClass/build --config ${{env.BUILD_TYPE}}
+    - name: Build LibrariesSandbox
+      run: cmake --build ${{github.workspace}}/LibrariesSandbox/build --config ${{env.BUILD_TYPE}}
 
     - name: Test
-      working-directory: ${{github.workspace}}/filesystem/build
+      working-directory: ${{github.workspace}}/LibrariesSandbox/build
       run: ctest -C ${{env.BUILD_TYPE}}
       
